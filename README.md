@@ -17,6 +17,12 @@ One-line version:
 curl -fsSL https://raw.githubusercontent.com/bjdmh/grok-research/dev/install_grok_research_skill.sh -o install_grok_research_skill.sh && bash install_grok_research_skill.sh --api-key sk-...
 ```
 
+This generic one-line install also honors `CODEX_HOME`, for example:
+
+```bash
+export CODEX_HOME=~/.codex && curl -fsSL https://raw.githubusercontent.com/bjdmh/grok-research/dev/install_grok_research_skill.sh -o install_grok_research_skill.sh && bash install_grok_research_skill.sh --api-key sk-...
+```
+
 What the installer does:
 
 - Downloads the `dev` branch archive of this repository by default
