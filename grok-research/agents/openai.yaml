@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grok Research"
+  short_description: "Use Grok for research with verification guardrails."
+  default_prompt: "Use $grok-research to research this topic, challenge the first answer, and return a verified summary."
