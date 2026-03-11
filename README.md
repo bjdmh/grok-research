@@ -17,7 +17,7 @@ One-line version:
 curl -fsSL https://raw.githubusercontent.com/bjdmh/grok-research/dev/install_grok_research_skill.sh -o install_grok_research_skill.sh && bash install_grok_research_skill.sh --api-key sk-...
 ```
 
-> **Important:** This generic one-line install also honors `CODEX_HOME`, for example:
+### **Important: This generic one-line install also honors `CODEX_HOME`**
 
 ```bash
 export CODEX_HOME=~/.codex && curl -fsSL https://raw.githubusercontent.com/bjdmh/grok-research/dev/install_grok_research_skill.sh -o install_grok_research_skill.sh && bash install_grok_research_skill.sh --api-key sk-...
@@ -35,7 +35,7 @@ You can override the source archive if needed:
 bash install_grok_research_skill.sh --api-key sk-... --zip-url https://github.com/bjdmh/grok-research/archive/refs/heads/dev.zip
 ```
 
-> **Important:** If you want a one-line deployment that targets `~/.paolu-codex`:
+### **Important: One-line deployment targeting `~/.paolu-codex`**
 
 ```bash
 export CODEX_HOME=~/.paolu-codex && curl -fsSL https://raw.githubusercontent.com/bjdmh/grok-research/dev/install_grok_research_skill.sh -o install_grok_research_skill.sh && bash install_grok_research_skill.sh --api-key sk-...
