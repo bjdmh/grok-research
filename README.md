@@ -24,6 +24,22 @@ curl -fsSL https://raw.githubusercontent.com/bjdmh/grok-research/dev/install_gro
 export CODEX_HOME=~/.codex && curl -fsSL https://raw.githubusercontent.com/bjdmh/grok-research/dev/install_grok_research_skill.sh -o install_grok_research_skill.sh && bash install_grok_research_skill.sh --api-key sk-...
 ```
 
+## Install to `~/.paolu-codex`
+
+If your Codex environment uses `CODEX_HOME=~/.paolu-codex`, use this version:
+
+```bash
+export CODEX_HOME=~/.paolu-codex
+curl -fsSL https://raw.githubusercontent.com/bjdmh/grok-research/dev/install_grok_research_skill.sh -o install_grok_research_skill.sh
+bash install_grok_research_skill.sh --api-key sk-...
+```
+
+One-line version:
+
+```bash
+export CODEX_HOME=~/.paolu-codex && curl -fsSL https://raw.githubusercontent.com/bjdmh/grok-research/dev/install_grok_research_skill.sh -o install_grok_research_skill.sh && bash install_grok_research_skill.sh --api-key sk-...
+```
+
 What the installer does:
 
 - Downloads the `dev` branch archive of this repository by default
@@ -34,13 +50,6 @@ You can override the source archive if needed:
 
 ```bash
 bash install_grok_research_skill.sh --api-key sk-... --zip-url https://github.com/bjdmh/grok-research/archive/refs/heads/dev.zip
-```
-
-> [!IMPORTANT]
-> One-line deployment targeting `~/.paolu-codex`.
-
-```bash
-export CODEX_HOME=~/.paolu-codex && curl -fsSL https://raw.githubusercontent.com/bjdmh/grok-research/dev/install_grok_research_skill.sh -o install_grok_research_skill.sh && bash install_grok_research_skill.sh --api-key sk-...
 ```
 
 ## Repository Contents
