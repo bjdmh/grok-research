@@ -58,6 +58,8 @@ The client resolves credentials in this order:
 3. `~/.config/grok/api_key`
 4. `$CODEX_HOME/secrets/grok_api_key`
 
+When `CODEX_HOME` is unset, both the installer and runtime client default to `~/.codex`.
+
 ## Notes
 
 - Default endpoint is `https://chat.tabcode.cc/v1/chat/completions`

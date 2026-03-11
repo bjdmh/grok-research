@@ -37,7 +37,7 @@ Prerequisites:
 Minimal call:
 
 ```bash
-python /root/.paolu-codex/skills/grok-research/scripts/grok_chat.py \
+python "${CODEX_HOME:-$HOME/.codex}/skills/grok-research/scripts/grok_chat.py" \
   --system "You are a concise research assistant." \
   --prompt "List 5 current options for X, with risks and validation ideas."
 ```
@@ -47,7 +47,7 @@ The client resolves credentials in this order:
 1. `GROK_API_KEY`
 2. current working directory `.env` → `GROK_API_KEY=...`
 3. `~/.config/grok/api_key`
-4. `$CODEX_HOME/secrets/grok_api_key` (defaults to `~/.paolu-codex/secrets/grok_api_key` when `CODEX_HOME` is unset)
+4. `$CODEX_HOME/secrets/grok_api_key` (defaults to `~/.codex/secrets/grok_api_key` when `CODEX_HOME` is unset)
 
 For multi-turn or fully controlled prompts, create a `messages.json` file and pass `--messages-file`. The script accepts standard Chat Completions `messages`.
 

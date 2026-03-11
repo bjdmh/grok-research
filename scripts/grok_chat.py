@@ -14,7 +14,7 @@ DEFAULT_MODEL = "grok-4.20-beta"
 
 
 def default_key_paths() -> tuple[Path, ...]:
-    codex_home = Path(os.environ.get("CODEX_HOME", Path.home() / ".paolu-codex")).expanduser()
+    codex_home = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex")).expanduser()
     return (
         Path.home() / ".config" / "grok" / "api_key",
         codex_home / "secrets" / "grok_api_key",
