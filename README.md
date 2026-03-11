@@ -35,7 +35,7 @@ You can override the source archive if needed:
 bash install_grok_research_skill.sh --api-key sk-... --zip-url https://github.com/bjdmh/grok-research/archive/refs/heads/dev.zip
 ```
 
-If you want a one-line deployment that targets `~/.paolu-codex`:
+> **Important:** If you want a one-line deployment that targets `~/.paolu-codex`:
 
 ```bash
 export CODEX_HOME=~/.paolu-codex && curl -fsSL https://raw.githubusercontent.com/bjdmh/grok-research/dev/install_grok_research_skill.sh -o install_grok_research_skill.sh && bash install_grok_research_skill.sh --api-key sk-...
