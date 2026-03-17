@@ -39,8 +39,16 @@ Minimal call:
 ```bash
 python "${CODEX_HOME:-$HOME/.codex}/skills/grok-research/scripts/grok_chat.py" \
   --system "You are a concise research assistant." \
+  --timeout 300 \
   --prompt "List 5 current options for X, with risks and validation ideas."
 ```
+
+Latency note:
+
+1. Grok requests through `chat.tabcode.cc` can be slow for larger or research-heavy prompts.
+2. A response often takes 1-5 minutes, but it is usually available within 5 minutes.
+3. Do not assume the service is unavailable just because it does not answer immediately.
+4. `grok_chat.py` now defaults to `--timeout 300`, which is a better fit for these longer requests.
 
 The client resolves credentials in this order:
 
@@ -126,4 +134,5 @@ Use `--raw-output` only when you intentionally want the unfiltered model text.
 
 1. Default endpoint is `https://chat.tabcode.cc/v1/chat/completions`.
 2. Default model is `grok-4.20-beta`.
-3. Override with `GROK_API_BASE` or `GROK_MODEL` when needed.
+3. Grok responses can take several minutes for larger prompts; callers should plan for up to about 5 minutes before treating the request as failed.
+4. Override with `GROK_API_BASE` or `GROK_MODEL` when needed.

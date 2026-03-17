@@ -64,8 +64,12 @@ bash install_grok_research_skill.sh --api-key sk-... --zip-url https://github.co
 ```bash
 python grok-research/scripts/grok_chat.py \
   --system "You are a concise research assistant." \
+  --timeout 300 \
   --prompt "List 5 current options for X, with risks and validation ideas."
 ```
+
+> [!NOTE]
+> Grok requests through `chat.tabcode.cc` can be slow for larger or research-heavy prompts. A response often takes 1-5 minutes, but it is usually available within 5 minutes. Do not assume the service is unavailable just because it does not answer immediately. `grok_chat.py` now defaults to `--timeout 300`, which is a better fit for these longer requests.
 
 The client resolves credentials in this order:
 

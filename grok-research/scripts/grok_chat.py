@@ -41,7 +41,7 @@ def parse_args() -> argparse.Namespace:
         default=os.environ.get("GROK_API_BASE", DEFAULT_BASE),
         help="Full API URL.",
     )
-    parser.add_argument("--timeout", type=int, default=120)
+    parser.add_argument("--timeout", type=int, default=300)
     parser.add_argument(
         "--raw-output",
         action="store_true",
